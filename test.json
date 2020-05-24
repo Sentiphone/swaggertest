@@ -1,0 +1,388 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "test-api01-func",
+    "version": "1.0",
+    "description": "Import from \"test-api01-func\" Function App"
+  },
+  "host": "terra-api01-apim.azure-api.net",
+  "basePath": "/test-api01-func",
+  "schemes": [
+    "https"
+  ],
+  "securityDefinitions": {
+    "apiKeyHeader": {
+      "type": "apiKey",
+      "name": "Ocp-Apim-Subscription-Key",
+      "in": "header"
+    },
+    "apiKeyQuery": {
+      "type": "apiKey",
+      "name": "subscription-key",
+      "in": "query"
+    }
+  },
+  "security": [
+    {
+      "apiKeyHeader": []
+    },
+    {
+      "apiKeyQuery": []
+    }
+  ],
+  "paths": {
+    "/groups-push": {
+      "post": {
+        "operationId": "post-groups-push",
+        "summary": "groups-push",
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/eta/{lat}/{lon}": {
+      "get": {
+        "operationId": "get-insight-eta-get",
+        "summary": "insight-eta-get",
+        "parameters": [
+          {
+            "name": "lat",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "lon",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/riders/negotiate": {
+      "options": {
+        "operationId": "options-rider-hub-negotiate",
+        "summary": "rider-hub-negotiate",
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      },
+      "post": {
+        "operationId": "post-rider-hub-negotiate",
+        "summary": "rider-hub-negotiate",
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/riders-push": {
+      "post": {
+        "operationId": "post-riders-push",
+        "summary": "riders-push",
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/history/{eventId}/{stageId}/groups": {
+      "get": {
+        "operationId": "get-history-groups-get",
+        "summary": "history-groups-get",
+        "parameters": [
+          {
+            "name": "eventId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "stageId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/telemetry/ingest": {
+      "post": {
+        "operationId": "post-telemetry-ingestion-post",
+        "summary": "telemetry-ingestion-post",
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/event/{eventId}/stages": {
+      "get": {
+        "operationId": "get-event-stages-get",
+        "summary": "event-stages-get",
+        "parameters": [
+          {
+            "name": "eventId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/data-cards/negotiate": {
+      "options": {
+        "operationId": "options-data-cards-hub-negotiate",
+        "summary": "data-cards-hub-negotiate",
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      },
+      "post": {
+        "operationId": "post-data-cards-hub-negotiate",
+        "summary": "data-cards-hub-negotiate",
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/event/{eventId}": {
+      "get": {
+        "operationId": "get-event-race-get",
+        "summary": "event-race-get",
+        "parameters": [
+          {
+            "name": "eventId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/event/{eventId}/riders": {
+      "get": {
+        "operationId": "get-event-riders-get",
+        "summary": "event-riders-get",
+        "parameters": [
+          {
+            "name": "eventId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/event/{eventId}/teams": {
+      "get": {
+        "operationId": "get-event-teams-get",
+        "summary": "event-teams-get",
+        "parameters": [
+          {
+            "name": "eventId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/event/current/stages/current/route": {
+      "get": {
+        "operationId": "get-event-current-route-get",
+        "summary": "event-current-route-get",
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/groups/negotiate": {
+      "options": {
+        "operationId": "options-group-hub-negotiate",
+        "summary": "group-hub-negotiate",
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      },
+      "post": {
+        "operationId": "post-group-hub-negotiate",
+        "summary": "group-hub-negotiate",
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/event/{eventId}/stages/{stageId}/classifications": {
+      "get": {
+        "operationId": "get-event-classifications-get",
+        "summary": "event-classifications-get",
+        "parameters": [
+          {
+            "name": "eventId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "stageId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/caravan": {
+      "get": {
+        "operationId": "get-event-caravan-get",
+        "summary": "event-caravan-get",
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/event/{eventId}/stages/{stageId}/route": {
+      "get": {
+        "operationId": "get-event-route-get",
+        "summary": "event-route-get",
+        "parameters": [
+          {
+            "name": "eventId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "stageId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/event/{eventId}/stages/{stageId}/jerseywearers": {
+      "get": {
+        "operationId": "get-event-jerseywearers-get",
+        "summary": "event-jerseywearers-get",
+        "parameters": [
+          {
+            "name": "eventId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "stageId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/history/{eventId}/{stageId}/riders": {
+      "get": {
+        "operationId": "get-history-riders-get",
+        "summary": "history-riders-get",
+        "parameters": [
+          {
+            "name": "eventId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "stageId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    },
+    "/data-cards-push": {
+      "post": {
+        "operationId": "post-data-cards-push",
+        "summary": "data-cards-push",
+        "responses": {
+          "200": {
+            "description": null
+          }
+        }
+      }
+    }
+  },
+  "tags": []
+}
