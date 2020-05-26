@@ -1,0 +1,141 @@
+{
+    "openapi": "3.0.1",
+    "info": {
+        "title": "fep - live",
+        "description": "API providing access to all race related dynamic data",
+        "version": "v3"
+    },
+    "servers": [
+        {
+            "url": "https://test-api01-apim.azure-api.net/fep-telemetry/v3"
+        }
+    ],
+    "paths": {
+        "/riders-push": {
+            "post": {
+                "summary": "riders-push",
+                "operationId": "post-riders-push",
+                "responses": {
+                    "200": {
+                        "description": null
+                    }
+                }
+            }
+        },
+        "/data-cards/negotiate": {
+            "options": {
+                "summary": "data-cards-hub-negotiate",
+                "operationId": "options-data-cards-hub-negotiate",
+                "responses": {
+                    "200": {
+                        "description": null
+                    }
+                }
+            },
+            "post": {
+                "summary": "data-cards-hub-negotiate",
+                "operationId": "post-data-cards-hub-negotiate",
+                "responses": {
+                    "200": {
+                        "description": null
+                    }
+                }
+            }
+        },
+        "/groups/negotiate": {
+            "post": {
+                "summary": "group-hub-negotiate",
+                "operationId": "post-group-hub-negotiate",
+                "responses": {
+                    "200": {
+                        "description": null
+                    }
+                }
+            },
+            "options": {
+                "summary": "group-hub-negotiate",
+                "operationId": "options-group-hub-negotiate",
+                "responses": {
+                    "200": {
+                        "description": null
+                    }
+                }
+            }
+        },
+        "/groups-push": {
+            "post": {
+                "summary": "groups-push",
+                "operationId": "post-groups-push",
+                "responses": {
+                    "200": {
+                        "description": null
+                    }
+                }
+            }
+        },
+        "/riders/negotiate": {
+            "options": {
+                "summary": "rider-hub-negotiate",
+                "operationId": "options-rider-hub-negotiate",
+                "responses": {
+                    "200": {
+                        "description": null
+                    }
+                }
+            },
+            "post": {
+                "summary": "rider-hub-negotiate",
+                "operationId": "post-rider-hub-negotiate",
+                "responses": {
+                    "200": {
+                        "description": null
+                    }
+                }
+            }
+        },
+        "/data-cards-push": {
+            "post": {
+                "summary": "data-cards-push",
+                "operationId": "post-data-cards-push",
+                "responses": {
+                    "200": {
+                        "description": null
+                    }
+                }
+            }
+        },
+        "/telemetry/ingest": {
+            "post": {
+                "summary": "telemetry-ingestion-post",
+                "operationId": "post-telemetry-ingestion-post",
+                "responses": {
+                    "200": {
+                        "description": null
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "securitySchemes": {
+            "apiKeyHeader": {
+                "type": "apiKey",
+                "name": "Ocp-Apim-Subscription-Key",
+                "in": "header"
+            },
+            "apiKeyQuery": {
+                "type": "apiKey",
+                "name": "subscription-key",
+                "in": "query"
+            }
+        }
+    },
+    "security": [
+        {
+            "apiKeyHeader": []
+        },
+        {
+            "apiKeyQuery": []
+        }
+    ]
+}
