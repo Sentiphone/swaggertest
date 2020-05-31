@@ -1,0 +1,418 @@
+{
+    "openapi": "3.0.1",
+    "info": {
+        "title": "fep - static",
+        "description": "API providing access to all race related static data",
+        "version": "v3"
+    },
+    "servers": [
+        {
+            "url": "https://dev-api01-apim.azure-api.net/fep-api/v3"
+        }
+    ],
+    "paths": {
+        "/history/{eventId}/{stageId}/riders": {
+            "get": {
+                "summary": "history-riders-get",
+                "operationId": "get-history-riders-get",
+                "parameters": [
+                    {
+                        "name": "eventId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "enum": [
+                                "TDF 2019"
+                            ],
+                            "type": ""
+                        }
+                    },
+                    {
+                        "name": "stageId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "enum": [
+                                "1400"
+                            ],
+                            "type": ""
+                        }
+                    },
+                    {
+                        "name": "startTime",
+                        "in": "query",
+                        "schema": {
+                            "enum": [
+                                "2019-07-20 11:51:52"
+                            ],
+                            "type": ""
+                        }
+                    },
+                    {
+                        "name": "endTime",
+                        "in": "query",
+                        "schema": {
+                            "enum": [
+                                "2019-07-20 11:52:00"
+                            ],
+                            "type": ""
+                        }
+                    },
+                    {
+                        "name": "startIndex",
+                        "in": "query",
+                        "schema": {
+                            "enum": [
+                                "0"
+                            ],
+                            "type": ""
+                        }
+                    },
+                    {
+                        "name": "recordCount",
+                        "in": "query",
+                        "schema": {
+                            "enum": [
+                                "1000"
+                            ],
+                            "type": ""
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": null
+                    }
+                }
+            }
+        },
+        "/event/{eventId}/riders": {
+            "get": {
+                "summary": "event-riders-get",
+                "operationId": "get-event-riders-get",
+                "parameters": [
+                    {
+                        "name": "eventId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "enum": [
+                                "TDF 2019",
+                                "VUE 2019",
+                                "PNC 2020",
+                                "PRX 2019",
+                                "current"
+                            ],
+                            "type": "",
+                            "default": ""
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": null
+                    }
+                }
+            }
+        },
+        "/history/{eventId}/{stageId}/groups": {
+            "get": {
+                "summary": "history-groups-get",
+                "operationId": "get-history-groups-get",
+                "parameters": [
+                    {
+                        "name": "eventId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "enum": [
+                                "TDF 2019"
+                            ],
+                            "type": ""
+                        }
+                    },
+                    {
+                        "name": "stageId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "enum": [
+                                "1400"
+                            ],
+                            "type": ""
+                        }
+                    },
+                    {
+                        "name": "startTime",
+                        "in": "query",
+                        "schema": {
+                            "enum": [
+                                "2019-07-20 11:51:52"
+                            ],
+                            "type": ""
+                        }
+                    },
+                    {
+                        "name": "endTime",
+                        "in": "query",
+                        "schema": {
+                            "enum": [
+                                "2019-07-20 11:52:00"
+                            ],
+                            "type": ""
+                        }
+                    },
+                    {
+                        "name": "startIndex",
+                        "in": "query",
+                        "schema": {
+                            "enum": [
+                                "0"
+                            ],
+                            "type": ""
+                        }
+                    },
+                    {
+                        "name": "recordCount",
+                        "in": "query",
+                        "schema": {
+                            "enum": [
+                                "1000"
+                            ],
+                            "type": ""
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": null
+                    }
+                }
+            }
+        },
+        "/event/{eventId}/stages": {
+            "get": {
+                "summary": "event-stages-get",
+                "operationId": "get-event-stages-get",
+                "parameters": [
+                    {
+                        "name": "eventId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": ""
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": null
+                    }
+                }
+            }
+        },
+        "/event/{eventId}/stages/{stageId}/route": {
+            "get": {
+                "summary": "event-route-get",
+                "operationId": "get-event-route-get",
+                "parameters": [
+                    {
+                        "name": "eventId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": ""
+                        }
+                    },
+                    {
+                        "name": "stageId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": ""
+                        }
+                    },
+                    {
+                        "name": "reductionFactor",
+                        "in": "query",
+                        "schema": {
+                            "type": ""
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": null
+                    }
+                }
+            }
+        },
+        "/event/{eventId}/teams": {
+            "get": {
+                "summary": "event-teams-get",
+                "operationId": "get-event-teams-get",
+                "parameters": [
+                    {
+                        "name": "eventId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": ""
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": null
+                    }
+                }
+            }
+        },
+        "/event/{eventId}": {
+            "get": {
+                "summary": "event-race-get",
+                "operationId": "get-event-race-get",
+                "parameters": [
+                    {
+                        "name": "eventId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": ""
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": null
+                    }
+                }
+            }
+        },
+        "/event/{eventId}/stages/{stageId}/jerseywearers": {
+            "get": {
+                "summary": "event-jerseywearers-get",
+                "operationId": "get-event-jerseywearers-get",
+                "parameters": [
+                    {
+                        "name": "eventId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": ""
+                        }
+                    },
+                    {
+                        "name": "stageId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": ""
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": null
+                    }
+                }
+            }
+        },
+        "/event/{eventId}/stages/{stageId}/classifications": {
+            "get": {
+                "summary": "event-classifications-get",
+                "operationId": "get-event-classifications-get",
+                "parameters": [
+                    {
+                        "name": "eventId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": ""
+                        }
+                    },
+                    {
+                        "name": "stageId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": ""
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": null
+                    }
+                }
+            }
+        },
+        "/event/current/caravan": {
+            "get": {
+                "summary": "event-caravan-get",
+                "operationId": "get-event-caravan-get",
+                "responses": {
+                    "200": {
+                        "description": null
+                    }
+                }
+            }
+        },
+        "/insights/eta/{lat}/{lon}": {
+            "get": {
+                "summary": "insight-eta-get",
+                "operationId": "get-insight-eta-get",
+                "parameters": [
+                    {
+                        "name": "lat",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": ""
+                        }
+                    },
+                    {
+                        "name": "lon",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": ""
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": null
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "Test": {
+                "type": "object"
+            }
+        },
+        "securitySchemes": {
+            "apiKeyHeader": {
+                "type": "apiKey",
+                "name": "Ocp-Apim-Subscription-Key",
+                "in": "header"
+            },
+            "apiKeyQuery": {
+                "type": "apiKey",
+                "name": "subscription-key",
+                "in": "query"
+            }
+        }
+    },
+    "security": [
+        {
+            "apiKeyHeader": []
+        },
+        {
+            "apiKeyQuery": []
+        }
+    ]
+}
