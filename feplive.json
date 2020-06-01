@@ -7,7 +7,7 @@
     },
     "servers": [
         {
-            "url": "https://dev-api01-apim.azure-api.net/fep-telemetry/v3"
+            "url": "https://terra-api01-apim.azure-api.net/fep-telemetry/"
         }
     ],
     "paths": {
